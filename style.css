@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    
+}
+
+body{
+    background-color: #c2a5ea;
+}
+
+img {
+    width: 70%;
+    height: 100%;
+}
+
+#siswa-berprestasi, #profile {
+    padding-top: 35px;
+}
+
+/* Nav */
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    margin-left: 60px;
+    font-size: 24px;
+}
+
+nav {
+    position: fixed;
+    z-index: 2;
+    background-color: #2E0249;
+    width: 100%;
+    padding: 10px 0;
+}
+
+nav .navbar {
+    margin: 0 50px;
+
+}
+
+.navbar .navbar-left {
+    float: left;
+}
+
+.navbar-left a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}
+
+.navbar-right {
+    float: right;
+}
+
+input[type=checkbox]{
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 20px;
+    user-select: none;
+}
+/* End Nav */
+
+/* Background Image */
+.image-content img {
+    width: 100%;
+    max-height: 600px;
+    padding-top: 2.5em;
+}
+/* End Background Image */
+
+/* Siswa Berprestasi */
+.content-grid {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 40px 50px;
+}
+
+.content-grid img {
+    width: 100%;
+    height: 100%;
+}
+
+.content-grid h1 {
+    grid-column: 1/5;
+}
+/* End Siswa Berprestasi */
+
+/* Content Visi Misi & Profile */
+.content-grid-1 {
+    display: grid;
+    grid-gap: 35px;
+    grid-template-columns: 1fr 1fr;
+    margin: 15px 50px;
+}
+
+.card {
+    padding: 20px;
+    margin-top: 10px;
+    text-align: justify;
+    color: rgb(255, 255, 255);
+    background-color: #4C3575;
+    border-radius: 5px;
+    min-height: 100px;
+}
+
+.col {
+    padding: 60px 0;
+    text-align: justify;
+    width: 100%;
+}
+
+.content-grid-1 h1 {
+    grid-column: 1/3;
+}
+/* End Content Visi Misi & Profile */
+
+/* Content Daftar */
+.content-grid-2 {
+    display: grid;
+    grid-gap: 30px;
+    grid:
+        'kiri'
+        'daftar';
+    margin: 40px 50px;
+}
+
+.content-grid-2 .card {
+    box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 10px;
+    text-align: center;
+    background-color: #8366b5;
+    color: black;
+}
+
+.content-grid-2 .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.button-submit {
+    background-color: #A91079;
+    font-weight: bolder;
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid #81125d;
+    border-radius: 20px;
+}
+
+.button-submit:hover{
+    background-color: #81125d;
+    cursor: pointer;
+
+}
+/* End Content Daftar */
+
+/* Footer */
+footer {
+    background-color: #2E0249;
+    color: white;
+    text-align: center;
+    height: 110px;
+    padding: 25px;
+}
+
+footer .content-grid-3 {
+    font-weight: 100;
+    display: grid;
+    grid-gap: 30px;
+    grid:
+        'kiri tengah kanan';
+}
+
+footer .content-grid-3 .grid-items {
+    display: grid;
+    grid:
+        'satu dua tiga empat lima';
+}
+
+footer .content-grid-3 .grid-items a {
+    text-decoration: none;
+    color: white;
+    margin: 5px;
+}
+/* End Footer */
+
+
+/* Responsive */
+
+@media only screen and (max-width: 600px) {
+
+    /* Nav */
+    .navbar ul li a {
+        font-size: .7em;
+        margin-left: 10px;
+    }
+
+    .navbar-left a {
+        font-size: .9em;
+    }
+
+    nav {
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    .hamburger {
+        display: block;
+        margin-left: 70%;
+    }
+
+    input[type=checkbox]:checked ~ .navbar-right{
+        display: block;
+    }
+
+    .navbar-right {
+        display: none;
+        position: absolute;
+        background-color:#2E0249;
+        right: 0;
+        left: 0;
+        text-align: center;
+    }
+
+    .navbar-right li:hover {
+        display: inline-block;
+        background-color:#160124;
+        transition: 0.3s ease;
+    }
+
+    /* End Navbar */
+
+    #siswa-berprestasi, #profile {
+        padding-top: 0px;
+    }
+
+    .content-grid h1 {
+        font-size: 20px;
+        grid-column: 1/1;
+        grid-row-end: 1;
+    }
+
+    .content-grid {
+        display: grid;
+        column-gap: 0x;
+        grid-template-rows: repeat(8, 1fr);
+        grid-template-columns: 1fr;
+        margin: 0px 50px;
+    }
+
+    .content-grid-1 {
+        display: grid;
+        grid-gap: 35px;
+        grid-template-columns: 1fr;
+        margin: 15px 50px;
+    }
+    
+    .col {
+        padding: 0px 0px;
+    }
+
+    .content-grid-1 h1 {
+        grid-column: 1/1;
+        grid-row-end: 1;
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    h4 {
+        display: none;
+    }
+
+    .content-grid-1 .col p {
+        font-size: 12px;
+    }
+
+    .content-grid-2 p i{
+        font-size: .8em;
+    }
+}
